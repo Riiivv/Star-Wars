@@ -1,10 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Theme</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-$END$
+<header>
+    <div>
+        <h1>Welcome to the Star Wars Universe</h1>
+        <p>Explore the galaxy far, far away</p>
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button> <!-- Hamburger ikon -->
+            <ul id="menu">
+                <li><a href="#characters" onclick="navigateTo('characters')">Characters</a></li>
+                <li><a href="#planets" onclick="navigateTo('planets')">Planets</a></li>
+                <li><a href="#films" onclick="navigateTo('films')">Films</a></li>
+            </ul>
+        </nav>
+    </div>
+    <img src="assets/img/stars.jpg" alt="Star Wars Banner">
+</header>
+<main>
+    <section id="characters">
+        <h4>Characters</h4>
+        <p>Here you will see a list of Star Wars characters with details like name, height, birth year, and gender.</p>
+        <input type="text" placeholder="Search for a character">
+        <button>Search</button>
+        <ul>
+            <li><strong>Name:</strong> Example Name<br><strong>Height:</strong> 180 cm<br><strong>Birth Year:</strong> 19BBY<br><strong>Gender:</strong> Male</li>
+        </ul>
+        <button>Previous</button>
+        <button>Next</button>
+    </section>
+    <section id="planets">
+        <h4>Planets</h4>
+        <p>Here you can explore a list of Star Wars planets with details like name, population, climate, and terrain.</p>
+        <label for="climate-filter">Filter by climate:</label>
+        <select id="climate-filter">
+            <option value="all">All</option>
+            <option value="arid">Arid</option>
+            <option value="temperate">Temperate</option>
+            <option value="tropical">Tropical</option>
+            <option value="frozen">Frozen</option>
+        </select>
+        <ul>
+            <li><strong>Name:</strong> Tatooine<br><strong>Population:</strong> 200,000<br><strong>Climate:</strong> Arid<br><strong>Terrain:</strong> Desert</li>
+            <li><strong>Name:</strong> Hoth<br><strong>Population:</strong> Unknown<br><strong>Climate:</strong> Frozen<br><strong>Terrain:</strong> Tundra, Ice caves</li>
+        </ul>
+    </section>
+    <section id="films">
+        <h4>Films</h4>
+        <p>Here you will find a list of Star Wars films along with their release dates and opening crawls.</p>
+        <ul>
+            <li>
+                <strong>Title:</strong> A New Hope<br>
+                <strong>Release Date:</strong> 1977-05-25<br>
+                <button onclick="alert('It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.')">View Opening Crawl</button>
+            </li>
+        </ul>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2025 Star Wars Universe. All rights reserved.</p>
+</footer>
+
+<!-- Placer din JavaScript før lukningen af </body> -->
+<script src="assets/js/script.js"></script>
 </body>
 </html>
